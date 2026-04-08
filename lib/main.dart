@@ -19,20 +19,17 @@ final showPerformanceOverlayProvider =
 );
 
 void main() async {
-  // Preserve the native splash screen while we initialize
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize Hive local database before runApp
+  // Initialize Hive local database
   final taskBox = await HiveSetup.init();
 
-  // Remove splash screen now that everything is ready
+  // Remove splash after init is done
   FlutterNativeSplash.remove();
 
   runApp(
     ProviderScope(
       overrides: [
-        // Inject the opened Hive box into Riverpod
         hiveProvider.overrideWithValue(taskBox),
       ],
       child: const MyApp(),
