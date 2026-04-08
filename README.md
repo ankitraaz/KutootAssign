@@ -15,9 +15,13 @@ A high-performance infinite scrolling feed fetching data from a mock API with he
 
 ## 📸 Screenshots
 
-| Feed Screen | Tasks (Online) | Tasks (Offline) | Add Task | Swipe to Delete |
-|:-:|:-:|:-:|:-:|:-:|
-| <img src="screenshots/feed.jpeg" width="180"> | <img src="screenshots/tasks_online.jpeg" width="180"> | <img src="screenshots/tasks_offline.jpeg" width="180"> | <img src="screenshots/add_task.jpeg" width="180"> | <img src="screenshots/swipe_delete.jpeg" width="180"> |
+<p align="center">
+  <img src="screenshots/feed.jpeg" width="180" />
+  <img src="screenshots/tasks_online.jpeg" width="180" />
+  <img src="screenshots/tasks_offline.jpeg" width="180" />
+  <img src="screenshots/add_task.jpeg" width="180" />
+  <img src="screenshots/swipe_delete.jpeg" width="180" />
+</p>
 
 ---
 
