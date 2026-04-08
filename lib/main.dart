@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'core/database/hive_setup.dart';
 import 'core/theme/app_theme.dart';
 import 'main_screen.dart';
@@ -18,10 +19,15 @@ final showPerformanceOverlayProvider =
 );
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  // Preserve the native splash screen while we initialize
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   // Initialize Hive local database before runApp
   final taskBox = await HiveSetup.init();
+
+  // Remove splash screen now that everything is ready
+  FlutterNativeSplash.remove();
 
   runApp(
     ProviderScope(
