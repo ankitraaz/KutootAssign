@@ -14,12 +14,10 @@ A high-performance infinite scrolling feed fetching data from a mock API with he
 - **Smart Network Handling:** Integrated `CancelToken` from Dio to abort stale image/data requests when the user scrolls rapidly. Memory-efficient image buffering using `cached_network_image`.
 
 ## 📸 Screenshots
-<p align="left">
-  <img src="screenshots/feed.png" width="200" alt="Feed Screen">
-  <img src="screenshots/tasks_online.png" width="200" alt="Online Task Manager">
-  <img src="screenshots/tasks_offline.png" width="200" alt="Offline Offline Manager">
-  <img src="screenshots/swipe_delete.png" width="200" alt="Swipe to delete task">
-</p>
+
+| Feed Screen | Tasks (Online) | Tasks (Offline) | Add Task | Swipe to Delete |
+|:-:|:-:|:-:|:-:|:-:|
+| <img src="screenshots/feed.jpeg" width="180"> | <img src="screenshots/tasks_online.jpeg" width="180"> | <img src="screenshots/tasks_offline.jpeg" width="180"> | <img src="screenshots/add_task.jpeg" width="180"> | <img src="screenshots/swipe_delete.jpeg" width="180"> |
 
 ---
 
