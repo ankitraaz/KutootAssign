@@ -18,7 +18,9 @@ class TaskScreen extends ConsumerWidget {
       if (previous != null && previous != next) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text(next ? 'Back online — syncing...' : 'You are offline'),
+            content: Text(
+              next ? 'Back online — syncing...' : 'You are offline',
+            ),
             duration: const Duration(seconds: 2),
           ),
         );
@@ -47,7 +49,9 @@ class TaskScreen extends ConsumerWidget {
                   height: 7,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: isOnline ? const Color(0xFF10B981) : Colors.redAccent,
+                    color: isOnline
+                        ? const Color(0xFF10B981)
+                        : Colors.redAccent,
                   ),
                 ),
                 const SizedBox(width: 6),
@@ -56,7 +60,9 @@ class TaskScreen extends ConsumerWidget {
                   style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w600,
-                    color: isOnline ? const Color(0xFF10B981) : Colors.redAccent,
+                    color: isOnline
+                        ? const Color(0xFF10B981)
+                        : Colors.redAccent,
                   ),
                 ),
               ],
@@ -77,16 +83,25 @@ class TaskScreen extends ConsumerWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.checklist_outlined, size: 56, color: Colors.grey[300]),
+                  Icon(
+                    Icons.checklist_outlined,
+                    size: 56,
+                    color: Colors.grey[300],
+                  ),
                   const SizedBox(height: 12),
-                  Text('No tasks yet',
-                      style: TextStyle(
-                          color: Colors.grey[500],
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600)),
+                  Text(
+                    'No tasks yet',
+                    style: TextStyle(
+                      color: Colors.grey[500],
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
                   const SizedBox(height: 4),
-                  Text('Tap + to create one',
-                      style: TextStyle(color: Colors.grey[400], fontSize: 13)),
+                  Text(
+                    'Tap + to create one',
+                    style: TextStyle(color: Colors.grey[400], fontSize: 13),
+                  ),
                 ],
               ),
             )
@@ -103,20 +118,28 @@ class TaskScreen extends ConsumerWidget {
                   background: Container(
                     alignment: Alignment.centerRight,
                     padding: const EdgeInsets.only(right: 24),
-                    margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                    margin: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 8,
+                    ),
                     decoration: BoxDecoration(
                       color: Colors.red[400],
                       borderRadius: BorderRadius.circular(16),
                     ),
-                    child: const Icon(Icons.delete_outline, color: Colors.white),
+                    child: const Icon(
+                      Icons.delete_outline,
+                      color: Colors.white,
+                    ),
                   ),
                   onDismissed: (_) {
                     ref.read(taskProvider.notifier).deleteTask(task.id);
                   },
                   child: Card(
                     child: ListTile(
-                      contentPadding:
-                          const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
+                      contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 12,
+                        vertical: 2,
+                      ),
                       leading: Checkbox(
                         value: task.isCompleted,
                         onChanged: (_) {
@@ -126,8 +149,9 @@ class TaskScreen extends ConsumerWidget {
                       title: Text(
                         task.title,
                         style: TextStyle(
-                          decoration:
-                              task.isCompleted ? TextDecoration.lineThrough : null,
+                          decoration: task.isCompleted
+                              ? TextDecoration.lineThrough
+                              : null,
                           color: task.isCompleted
                               ? Colors.grey[400]
                               : const Color(0xFF1A1A2E),
@@ -137,7 +161,9 @@ class TaskScreen extends ConsumerWidget {
                       ),
                       trailing: Container(
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 8, vertical: 4),
+                          horizontal: 8,
+                          vertical: 4,
+                        ),
                         decoration: BoxDecoration(
                           color: isSynced
                               ? const Color(0xFF10B981).withAlpha(15)

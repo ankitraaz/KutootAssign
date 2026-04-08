@@ -15,8 +15,8 @@ class PerformanceOverlayNotifier extends Notifier<bool> {
 
 final showPerformanceOverlayProvider =
     NotifierProvider<PerformanceOverlayNotifier, bool>(
-  PerformanceOverlayNotifier.new,
-);
+      PerformanceOverlayNotifier.new,
+    );
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,9 +29,7 @@ void main() async {
 
   runApp(
     ProviderScope(
-      overrides: [
-        hiveProvider.overrideWithValue(taskBox),
-      ],
+      overrides: [hiveProvider.overrideWithValue(taskBox)],
       child: const MyApp(),
     ),
   );
