@@ -13,6 +13,14 @@ A high-performance infinite scrolling feed fetching data from a mock API with he
 - **RepaintBoundaries:** Wrapped static and complex chart components inside `<RepaintBoundary>` to prevent the Flutter engine from repainting them when adjacent animations or scroll events trigger.
 - **Smart Network Handling:** Integrated `CancelToken` from Dio to abort stale image/data requests when the user scrolls rapidly. Memory-efficient image buffering using `cached_network_image`.
 
+## 📸 Screenshots
+<p align="left">
+  <img src="screenshots/feed.png" width="200" alt="Feed Screen">
+  <img src="screenshots/tasks_online.png" width="200" alt="Online Task Manager">
+  <img src="screenshots/tasks_offline.png" width="200" alt="Offline Offline Manager">
+  <img src="screenshots/swipe_delete.png" width="200" alt="Swipe to delete task">
+</p>
+
 ---
 
 ## 🔄 Task 2: State Management & Sync - Collaborative Task List
